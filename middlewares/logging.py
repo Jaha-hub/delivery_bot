@@ -15,7 +15,7 @@ class LoggingMiddleware(BaseMiddleware):
             data: Dict[str, Any]
     ):
         logger = get_logger()
-        # Время INFO MESSAGE время отработки . кто это отправил
+        # Время INFO MESSAGE время отработки (кто это отправил)
         start_time=time.time()
         response = await handler(event, data)
         end_time = (time.time() - start_time) * 1000

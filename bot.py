@@ -1,20 +1,16 @@
 from aiogram import Bot, Dispatcher
-from aiogram.filters.command import CommandStart
-from aiogram.types import Message
 from config import TOKEN
 from middlewares.logging import LoggingMiddleware
 from middlewares.auth import AuthMiddleware
-
+from routers.start import router as start
+from routers.order import router as order
 bot = Bot(TOKEN)
 dp = Dispatcher()
 
 dp.update.middleware(LoggingMiddleware())
 dp.update.middleware(AuthMiddleware())
-
-
-@dp.message(CommandStart())
-async def start(message: Message):
-    await message.answer("Hello")
+dp.include_router(start)
+dp.include_router(order)
 
 async def main():
     await dp.start_polling(bot)

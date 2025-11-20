@@ -45,3 +45,745 @@ AttributeError: 'NoneType' object has no attribute 'time'
 2025-11-20 20:20:46,737 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
 2025-11-20 20:20:46,737 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
 2025-11-20 20:20:46,998 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 21:19:07,127 - INFO - Update id=946294575 is not handled. Duration 135 ms by bot id=8200360038
+2025-11-20 21:19:07,128 - ERROR - Cause exception while process update id=946294575 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\bot.py", line 18, in start
+    await message.answer("Hello", reply_markup=start_kb())
+                                               ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:19:07,142 - INFO - Update id=946294576 is not handled. Duration 145 ms by bot id=8200360038
+2025-11-20 21:19:07,142 - ERROR - Cause exception while process update id=946294576 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\bot.py", line 18, in start
+    await message.answer("Hello", reply_markup=start_kb())
+                                               ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:20:24,197 - INFO - Polling stopped
+2025-11-20 21:20:24,198 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 21:20:24,198 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 21:20:24,449 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 21:25:43,678 - INFO - Update id=946294577 is not handled. Duration 218 ms by bot id=8200360038
+2025-11-20 21:25:43,678 - ERROR - Cause exception while process update id=946294577 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\routers\start.py", line 12, in start
+    await message.answer("Hello do you wanna order anything", reply_markup=start_kb())
+                                                                           ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:25:43,688 - INFO - Update id=946294580 is not handled. Duration 220 ms by bot id=8200360038
+2025-11-20 21:25:43,688 - ERROR - Cause exception while process update id=946294580 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\routers\start.py", line 12, in start
+    await message.answer("Hello do you wanna order anything", reply_markup=start_kb())
+                                                                           ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:25:43,697 - INFO - Update id=946294578 is not handled. Duration 233 ms by bot id=8200360038
+2025-11-20 21:25:43,697 - ERROR - Cause exception while process update id=946294578 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\routers\start.py", line 12, in start
+    await message.answer("Hello do you wanna order anything", reply_markup=start_kb())
+                                                                           ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:25:43,703 - INFO - Update id=946294579 is not handled. Duration 238 ms by bot id=8200360038
+2025-11-20 21:25:43,704 - ERROR - Cause exception while process update id=946294579 by bot id=8200360038
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\routers\start.py", line 12, in start
+    await message.answer("Hello do you wanna order anything", reply_markup=start_kb())
+                                                                           ~~~~~~~~^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\keyboards\start.py", line 4, in start_kb
+    kb = InlineKeyboardMarkup()
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-11-20 21:27:13,683 - INFO - Polling stopped
+2025-11-20 21:27:13,684 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 21:27:13,684 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 21:27:13,945 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 21:27:24,921 - INFO - MESSAGE: 2045.2263355255127ms
+2025-11-20 21:27:24,921 - INFO - Update id=946294581 is handled. Duration 2047 ms by bot id=8200360038
+2025-11-20 21:32:40,813 - INFO - Polling stopped
+2025-11-20 21:32:40,814 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 21:32:40,815 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 21:32:41,068 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 21:32:47,848 - INFO - MESSAGE: 825.5331516265869ms
+2025-11-20 21:32:47,848 - INFO - Update id=946294582 is handled. Duration 827 ms by bot id=8200360038
+2025-11-20 21:32:52,438 - INFO - Update id=946294583 is not handled. Duration 0 ms by bot id=8200360038
+2025-11-20 21:32:52,438 - ERROR - Cause exception while process update id=946294583 by bot id=8200360038
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 22, in __call__
+    from_user = event.callback_query.from_user1
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'. Did you mean: 'from_user'?
+2025-11-20 21:32:54,373 - INFO - Update id=946294584 is not handled. Duration 0 ms by bot id=8200360038
+2025-11-20 21:32:54,373 - ERROR - Cause exception while process update id=946294584 by bot id=8200360038
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 22, in __call__
+    from_user = event.callback_query.from_user1
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'. Did you mean: 'from_user'?
+2025-11-20 21:32:54,920 - INFO - Update id=946294585 is not handled. Duration 1 ms by bot id=8200360038
+2025-11-20 21:32:54,920 - ERROR - Cause exception while process update id=946294585 by bot id=8200360038
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 22, in __call__
+    from_user = event.callback_query.from_user1
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'. Did you mean: 'from_user'?
+2025-11-20 21:32:55,140 - INFO - Update id=946294586 is not handled. Duration 0 ms by bot id=8200360038
+2025-11-20 21:32:55,140 - ERROR - Cause exception while process update id=946294586 by bot id=8200360038
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 22, in __call__
+    from_user = event.callback_query.from_user1
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'. Did you mean: 'from_user'?
+2025-11-20 21:32:55,375 - INFO - Update id=946294587 is not handled. Duration 1 ms by bot id=8200360038
+2025-11-20 21:32:55,375 - ERROR - Cause exception while process update id=946294587 by bot id=8200360038
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    response = await handler(event, data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\auth.py", line 22, in __call__
+    from_user = event.callback_query.from_user1
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CallbackQuery' object has no attribute 'from_user1'. Did you mean: 'from_user'?
+2025-11-20 21:37:04,903 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2025-11-20 21:37:04,903 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 21:37:26,960 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:37:26,960 - WARNING - Sleep for 1.172848 seconds and try again... (tryings = 1, bot id = 8200360038)
+2025-11-20 21:37:49,178 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:37:49,178 - WARNING - Sleep for 1.615566 seconds and try again... (tryings = 2, bot id = 8200360038)
+2025-11-20 21:38:11,843 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:38:11,843 - WARNING - Sleep for 2.158327 seconds and try again... (tryings = 3, bot id = 8200360038)
+2025-11-20 21:38:35,063 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:38:35,063 - WARNING - Sleep for 2.697201 seconds and try again... (tryings = 4, bot id = 8200360038)
+2025-11-20 21:38:58,823 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:38:58,823 - WARNING - Sleep for 3.694667 seconds and try again... (tryings = 5, bot id = 8200360038)
+2025-11-20 21:39:23,575 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:39:23,576 - WARNING - Sleep for 4.786430 seconds and try again... (tryings = 6, bot id = 8200360038)
+2025-11-20 21:39:49,410 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:39:49,410 - WARNING - Sleep for 4.958709 seconds and try again... (tryings = 7, bot id = 8200360038)
+2025-11-20 21:40:15,391 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:40:15,391 - WARNING - Sleep for 5.099267 seconds and try again... (tryings = 8, bot id = 8200360038)
+2025-11-20 21:40:41,526 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:40:41,527 - WARNING - Sleep for 5.064654 seconds and try again... (tryings = 9, bot id = 8200360038)
+2025-11-20 21:41:07,632 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:41:07,632 - WARNING - Sleep for 4.947261 seconds and try again... (tryings = 10, bot id = 8200360038)
+2025-11-20 21:41:33,622 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:41:33,622 - WARNING - Sleep for 5.102730 seconds and try again... (tryings = 11, bot id = 8200360038)
+2025-11-20 21:41:59,764 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:41:59,764 - WARNING - Sleep for 4.969172 seconds and try again... (tryings = 12, bot id = 8200360038)
+2025-11-20 21:42:25,782 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:42:25,782 - WARNING - Sleep for 4.873150 seconds and try again... (tryings = 13, bot id = 8200360038)
+2025-11-20 21:42:51,697 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:42:51,697 - WARNING - Sleep for 5.075569 seconds and try again... (tryings = 14, bot id = 8200360038)
+2025-11-20 21:43:17,826 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:43:17,826 - WARNING - Sleep for 5.066776 seconds and try again... (tryings = 15, bot id = 8200360038)
+2025-11-20 21:43:43,937 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:43:43,937 - WARNING - Sleep for 5.054116 seconds and try again... (tryings = 16, bot id = 8200360038)
+2025-11-20 21:44:10,022 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:44:10,022 - WARNING - Sleep for 4.892002 seconds and try again... (tryings = 17, bot id = 8200360038)
+2025-11-20 21:44:35,961 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:44:35,961 - WARNING - Sleep for 5.089513 seconds and try again... (tryings = 18, bot id = 8200360038)
+2025-11-20 21:45:02,109 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:45:02,110 - WARNING - Sleep for 4.910965 seconds and try again... (tryings = 19, bot id = 8200360038)
+2025-11-20 21:45:28,074 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:45:28,074 - WARNING - Sleep for 5.084329 seconds and try again... (tryings = 20, bot id = 8200360038)
+2025-11-20 21:45:54,202 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:45:54,203 - WARNING - Sleep for 5.034835 seconds and try again... (tryings = 21, bot id = 8200360038)
+2025-11-20 21:46:20,298 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:46:20,298 - WARNING - Sleep for 4.986409 seconds and try again... (tryings = 22, bot id = 8200360038)
+2025-11-20 21:46:46,336 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:46:46,336 - WARNING - Sleep for 4.937598 seconds and try again... (tryings = 23, bot id = 8200360038)
+2025-11-20 21:47:12,318 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:47:12,319 - WARNING - Sleep for 4.837673 seconds and try again... (tryings = 24, bot id = 8200360038)
+2025-11-20 21:47:38,200 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:47:38,200 - WARNING - Sleep for 4.903659 seconds and try again... (tryings = 25, bot id = 8200360038)
+2025-11-20 21:48:04,169 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:48:04,169 - WARNING - Sleep for 5.083260 seconds and try again... (tryings = 26, bot id = 8200360038)
+2025-11-20 21:48:30,302 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:48:30,302 - WARNING - Sleep for 4.971414 seconds and try again... (tryings = 27, bot id = 8200360038)
+2025-11-20 21:48:56,314 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:48:56,314 - WARNING - Sleep for 5.085012 seconds and try again... (tryings = 28, bot id = 8200360038)
+2025-11-20 21:49:22,446 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:49:22,446 - WARNING - Sleep for 4.858683 seconds and try again... (tryings = 29, bot id = 8200360038)
+2025-11-20 21:49:48,330 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:49:48,330 - WARNING - Sleep for 4.892545 seconds and try again... (tryings = 30, bot id = 8200360038)
+2025-11-20 21:50:14,272 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:50:14,272 - WARNING - Sleep for 5.009308 seconds and try again... (tryings = 31, bot id = 8200360038)
+2025-11-20 21:50:40,314 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:50:40,315 - WARNING - Sleep for 5.132699 seconds and try again... (tryings = 32, bot id = 8200360038)
+2025-11-20 21:51:06,513 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:51:06,513 - WARNING - Sleep for 5.094716 seconds and try again... (tryings = 33, bot id = 8200360038)
+2025-11-20 21:51:32,652 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:51:32,652 - WARNING - Sleep for 5.054530 seconds and try again... (tryings = 34, bot id = 8200360038)
+2025-11-20 21:51:58,761 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:51:58,761 - WARNING - Sleep for 4.939503 seconds and try again... (tryings = 35, bot id = 8200360038)
+2025-11-20 21:52:24,758 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:52:24,758 - WARNING - Sleep for 4.992753 seconds and try again... (tryings = 36, bot id = 8200360038)
+2025-11-20 21:52:50,791 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:52:50,791 - WARNING - Sleep for 4.915707 seconds and try again... (tryings = 37, bot id = 8200360038)
+2025-11-20 21:53:16,751 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:53:16,752 - WARNING - Sleep for 4.969765 seconds and try again... (tryings = 38, bot id = 8200360038)
+2025-11-20 21:53:42,761 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:53:42,761 - WARNING - Sleep for 5.021589 seconds and try again... (tryings = 39, bot id = 8200360038)
+2025-11-20 21:54:08,829 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-11-20 21:54:08,829 - WARNING - Sleep for 5.001976 seconds and try again... (tryings = 40, bot id = 8200360038)
+2025-11-20 21:54:16,526 - INFO - Polling stopped
+2025-11-20 21:54:16,783 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
