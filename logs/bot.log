@@ -1,0 +1,47 @@
+2025-11-20 20:15:05,087 - INFO - Update id=946294571 is not handled. Duration 1 ms by bot id=8200360038
+2025-11-20 20:15:05,087 - ERROR - Cause exception while process update id=946294571 by bot id=8200360038
+AttributeError: 'NoneType' object has no attribute 'time'
+Traceback (most recent call last):
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ANUBIS PC\Desktop\parsing PE411\delivery_bot\middlewares\logging.py", line 20, in __call__
+    start_time=start.time()
+               ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'time'
+2025-11-20 20:16:20,010 - INFO - Polling stopped
+2025-11-20 20:16:20,011 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 20:16:20,011 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 20:16:20,273 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 20:16:26,317 - INFO - MESSAGE: 655.656099319458ms
+2025-11-20 20:16:26,320 - INFO - Update id=946294572 is handled. Duration 659 ms by bot id=8200360038
+2025-11-20 20:16:48,103 - INFO - Polling stopped
+2025-11-20 20:16:48,104 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 20:16:48,104 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 20:16:48,358 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'
+2025-11-20 20:16:56,475 - INFO - MESSAGE: 1577.5458812713623ms
+2025-11-20 20:16:56,476 - INFO - Update id=946294573 is handled. Duration 1579 ms by bot id=8200360038
+2025-11-20 20:17:18,224 - INFO - MESSAGE: 2.507925033569336ms
+2025-11-20 20:17:18,224 - INFO - Update id=946294574 is not handled. Duration 3 ms by bot id=8200360038
+2025-11-20 20:20:46,736 - INFO - Polling stopped
+2025-11-20 20:20:46,737 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-20 20:20:46,737 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8200360038)
+2025-11-20 20:20:46,998 - INFO - Polling stopped for bot @pe411_bot id=8200360038 - 'pe411'

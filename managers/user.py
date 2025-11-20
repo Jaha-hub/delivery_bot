@@ -20,11 +20,12 @@ class UserManager:
         stmt = insert(User).values(
             id=user_id,
             full_name=full_name,
-        )
+        ).returning(User)
         # execute запускает наше утверждение
-        await self.db.execute(stmt)
+        result = await self.db.execute(stmt)
         # commit Сохраняет в БД наше утверждение
         await self.db.commit()
+        return result.scalar_one_or_none()
 
     async def get(
             self,
@@ -52,3 +53,13 @@ class UserManager:
         stmt = delete(User).where(User.id == user_id)
         await self.db.execute(stmt)
         await self.db.commit()
+
+    async def get_or_create(
+            self,
+            user_id: int,
+            full_name: str,
+    ):
+        user = await self.get(user_id)
+        if user is None:
+            user = await self.create(user_id, full_name)
+        return user
