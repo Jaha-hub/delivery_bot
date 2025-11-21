@@ -7,3 +7,4 @@ def setting_kb():
     kb.button(text="en", callback_data="change_lang_to_en")
     kb.button(text="назад", callback_data="get_back")
     kb.adjust(1,1)
+    return kb.as_markup()

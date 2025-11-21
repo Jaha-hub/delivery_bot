@@ -9,4 +9,4 @@ router = Router()
 
 @router.message(CommandStart())
 async def start(message: Message):
-    await message.answer("Hello do you wanna order anything", reply_markup=start_kb())
+    await message.answer("Здраствуйте", reply_markup=start_kb())
