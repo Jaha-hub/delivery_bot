@@ -2,7 +2,6 @@ from sqlalchemy import insert, select, update,delete
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from models.user import User
-from schemas.user import UserCreate
 
 
 class UserManager:
@@ -42,10 +41,19 @@ class UserManager:
         result = await self.db.execute(stmt)
         return result.scalar_one_or_none()
 
-    async def update(
+    async def update_fullname(
+            self, user_id: int,  full_name: str
+    ):
+        stmt = update(User).where(User.id == user_id).values(
+            full_name=full_name
+        )
+        await self.db.execute(stmt)
+        await self.db.commit()
+
+    async def update_language(
             self, user_id: int, language: str
     ):
-        stmt = update(User).where(User.id == user_id).values(Language=language)
+        stmt = update(User).where(User.id == user_id).values(language=language)
         await self.db.execute(stmt)
         await self.db.commit()
 

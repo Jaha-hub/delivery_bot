@@ -1,10 +1,15 @@
 from _datetime import datetime
+from typing import Any
 
 from sqlalchemy import String, BigInteger, Column, DateTime
 from models.base import Base
 
 #Создание модельки юзера
 class User(Base):
+    def __init__(self, **kw: Any):
+        super().__init__(kw)
+        self.lang = None
+
     #Название таблицы
     __tablename__ = 'user'
     #id INT PRIMARY KEY

@@ -19,7 +19,7 @@ class AuthMiddleware(BaseMiddleware):
             if event.message:
                 from_user = event.message.from_user
             elif event.callback_query:
-                from_user = event.callback_query.from_user1
+                from_user = event.callback_query.from_user
             user = await manager.get_or_create(
                 user_id=from_user.id,
                 full_name=from_user.full_name,
