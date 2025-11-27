@@ -67,3 +67,22 @@ async def category_handler(
     )
     await state.set_state(MenuForm.product)
     return None
+
+@router.callback_query(F.data == "back")
+async def back_handler(
+        cb: CallbackQuery,
+        state: FSMContext,
+        user: User
+):
+    async with async_session() as session:
+        manager = CategoryManager(session)
+        categories = await manager.list()
+
+    await cb.message.edit_text(
+        "Выберите категорию",
+        reply_markup=menu_keyboard(
+            categories,
+            user.language,
+        )
+    )
+    await state.set_state(MenuForm.category)

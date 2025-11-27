@@ -1,4 +1,4 @@
-from sqlalchemy import insert, select, update, delete
+from sqlalchemy import  select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from models.product import Product

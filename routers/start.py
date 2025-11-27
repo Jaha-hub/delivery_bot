@@ -15,8 +15,7 @@ async def start(message: Message, user: User, state: FSMContext):
     await state.clear()
     await message.answer(
         "Привет я интернет магазин \n Выберите действие",
-                         reply_markup=start_kb(user.language
-                                                )
+                         reply_markup=start_kb(user.language)
     )
 
 
