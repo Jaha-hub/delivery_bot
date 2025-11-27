@@ -14,10 +14,10 @@ dp = Dispatcher()
 dp.update.middleware(LoggingMiddleware())
 dp.update.middleware(AuthMiddleware())
 
+dp.include_router(menu)
 dp.include_router(start)
 dp.include_router(order)
 dp.include_router(settings)
-dp.include_router(menu)
 
 
 async def main():
