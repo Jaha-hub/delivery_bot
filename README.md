@@ -1,55 +1,60 @@
-Установка alembic
-'''
+Установка Alembic
+```
 pip install alembic
-'''
-создание файлов и папки для миграции 
-'''
-alembic init<название папки>
-'''
-у нас появился alembic.ini
-отвечает за конфигурацию базы данных
-'''
+```
+Создание Файлов и Папки для Миграции
+```
+alembic init <название папки>
+```
+У нас появился файл alembic.ini
+Отвечает за конфигурацию базы данных
+```
 pip install psycopg2
-'''
-psycopg2 - помогает нам работать с Постргрес драверами 
-он синхронный 
+```
+psycopg2 - помогает нам работать с Postgres драйвер
+Он синхронный
 
-В alembic.ini мы изменили изменили значение переменной sqlalchemy.url
-sqlalchemy.url = postgresql+psycopg2://postgres:1@localhost:5432/DeliveryBot
+В alembic.ini мы изменили значение переменной sqlalchemy.url
+sqlalchemy.url = postgresql+psycopg2://postgres:1234@localhost:5432/DeliveryBot
 
-* postgresql+psycopg2 -> отвечает за то что какая СУБД
-* postgres:1 -> username:пароль к БД
-* localhost:5432 -> Хост на котором наша БД и порт
-* DeliveryBot -> название БД 
+* postgresql+psycopg2 -> Отвечает за то что какая СУБД
+* postgres:1234 -> юзернейм:пароль к БД
+* localhost:5432 -> Хост на котором наша БД и порт 
+* DeliveryBot -> название БД
 
+Мы открыли папку миграций и внутри env.py
+
+в Котором мы прописали 
 
 from models.base import Base
 from models.category import Category
 from models.product import Product
-from models.order import Order,OrderProduct
+from models.order import Order, OrderProduct
 from models.user import User
 
 target_metadata = Base.metadata
 
-создание миграции 
-'''
-alembic revision --autogenerate -m "название Миграции"
-'''
---autogenerate -> Позволяет автоматически брать изменения
+Создание Миграции
+```shell
+alembic revision --autogenerate -m "Название Миграции" 
+```
+* --autogenerate -> Позволяет автоматически брать изменении БД
+* -m -> Название для нашей версии
 
-применение миграции 
-'''
-alembic upgrade <version of migration>
-'''
-'''
+Применение Миграции
+```shell
+alembic upgrade <версия миграции>
+```
+Применение Всех версий Миграции
+```shell
 alembic upgrade head
-'''
+```
 
-откатится на пред версию
-'''
+Откатиться на Пред Версию
+```shell
 alembic downgrade -1
-'''
-откатится на опред версию
-'''
+```
+Откатиться на Определенную Версию
+```shell
 alembic downgrade <версия миграции>
-'''
+```

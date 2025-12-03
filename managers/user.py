@@ -1,7 +1,8 @@
-from sqlalchemy import insert, select, update,delete
+from sqlalchemy import insert, select, update, delete
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from models.user import User
+from schemas.user import UserCreate
 
 
 class UserManager:
@@ -14,15 +15,16 @@ class UserManager:
             full_name: str,
     ):
         # INSERT INTO TABLE(COLUMNS) VALUES
-        # Запрос для БД
-        # Insert(Модельку).values(столбец=значение)
+        # Мы пишем запрос для БД
+        # insert(Модельку).values(столбец=значение)
+        # statement
         stmt = insert(User).values(
             id=user_id,
             full_name=full_name,
         ).returning(User)
-        # execute запускает наше утверждение
+        # Запускает наше утверждение
         result = await self.db.execute(stmt)
-        # commit Сохраняет в БД наше утверждение
+        # Сохраняет в БД наше утверждение
         await self.db.commit()
         return result.scalar_one_or_none()
 
@@ -32,28 +34,33 @@ class UserManager:
     ):
         stmt = select(User).where(User.id == user_id)
         result = await self.db.execute(stmt)
-        print(result)
-        # достань первое или ничего
+        # Достань первое либо ничего
         return result.scalar_one_or_none()
 
     async def list(self):
         stmt = select(User)
         result = await self.db.execute(stmt)
-        return result.scalar_one_or_none()
+        return result.scalars().all()
 
-    async def update_fullname(
-            self, user_id: int,  full_name: str
+    async def update_language(
+            self,
+            user_id: int,
+            language: str
     ):
         stmt = update(User).where(User.id == user_id).values(
-            full_name=full_name
+            language=language
         )
         await self.db.execute(stmt)
         await self.db.commit()
 
-    async def update_language(
-            self, user_id: int, language: str
+    async def update_fullname(
+            self,
+            user_id: int,
+            fullname: str
     ):
-        stmt = update(User).where(User.id == user_id).values(language=language)
+        stmt = update(User).where(User.id == user_id).values(
+            full_name=fullname
+        )
         await self.db.execute(stmt)
         await self.db.commit()
 

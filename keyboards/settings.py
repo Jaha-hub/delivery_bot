@@ -1,22 +1,25 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
+def settings_keyboard(lang):
+    keyboard = InlineKeyboardBuilder()
 
-def setting_kb(lang):
-    kb = InlineKeyboardBuilder()
-    kb.button(text="Изменение имени", callback_data="change_name")
-    kb.button(text="Изменение языка", callback_data="change_lang")
-    kb.button(text="назад", callback_data="back")
-    kb.adjust(2,1)
-    return kb.as_markup()
+    keyboard.button(text="Смена Имени", callback_data="fullname")
+    keyboard.button(text="Смена Языка", callback_data="language")
+    keyboard.button(text="Назад", callback_data="back")
 
-def language_kb(lang):
-    kb = InlineKeyboardBuilder()
+    keyboard.adjust(2,1)
 
-    kb.button(text="🇷🇺", callback_data="lang_ru")
-    kb.button(text="🇬🇧", callback_data="lang_en")
-    kb.button(text="🇺🇿", callback_data="lang_uz")
+    return keyboard.as_markup()
 
-    kb.button(text="Назад", callback_data="back")
+def language_keyboard(lang):
+    keyboard = InlineKeyboardBuilder()
 
-    kb.adjust(1,3)
-    return kb.as_markup()
+    keyboard.button(text="🇷🇺", callback_data="lang_ru")
+    keyboard.button(text="🇬🇧", callback_data="lang_en")
+    keyboard.button(text="🇺🇿", callback_data="lang_uz")
+
+    keyboard.button(text="назад", callback_data="back")
+
+    keyboard.adjust(3,1)
+
+    return keyboard.as_markup()

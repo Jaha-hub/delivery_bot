@@ -18,13 +18,14 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
+
 from models.base import Base
 from models.category import Category
 from models.product import Product
-from models.order import Order,OrderProduct
+from models.order import Order, OrderProduct
 from models.user import User
-target_metadata = Base.metadata
 
+target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

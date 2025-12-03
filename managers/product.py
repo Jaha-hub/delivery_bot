@@ -1,4 +1,4 @@
-from sqlalchemy import  select
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from models.product import Product
@@ -6,12 +6,11 @@ from models.product import Product
 
 class ProductManager:
     def __init__(self, db: AsyncSession):
-        self.remove_from_cart = None
         self.db = db
 
     async def get(
             self,
-            product_id:int,
+            product_id: int,
     ):
         stmt = select(Product).where(Product.id == product_id)
         result = await self.db.execute(stmt)

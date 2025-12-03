@@ -7,13 +7,13 @@ from models.category import Category
 class CategoryManager:
     def __init__(self, db: AsyncSession):
         self.db = db
+
     async def get(
             self,
             category_id: int,
     ):
         stmt = select(Category).where(Category.id == category_id)
         result = await self.db.execute(stmt)
-        print(result)
         return result.scalar_one_or_none()
 
     async def list(self):

@@ -1,22 +1,20 @@
-from _datetime import datetime
-from typing import Any
+from datetime import datetime
 
-from sqlalchemy import String, BigInteger, Column, DateTime
+from sqlalchemy import Column, BigInteger, String, DateTime
 from models.base import Base
 
-#Создание модельки юзера
-class User(Base):
-    def __init__(self, **kw: Any):
-        super().__init__(kw)
-        self.lang = None
 
-    #Название таблицы
-    __tablename__ = 'user'
-    #id INT PRIMARY KEY
+# Создание Модельки Юзера
+class User(Base):
+    # Название Таблицы в БД
+    __tablename__ = "users"
+
+    # Поля Таблицы
+    # id INT PRIMARY KEY
     id = Column(BigInteger, primary_key=True)
-    #full_name VARCHAR(320) NOT NULL
+    # full_name VARCHAR(320) NOT NULL
     full_name = Column(String(320), nullable=False)
-    # language VARCHAR(320) Default = true
+    # language VARCHAR(2) DEFAULT 'ru'
     language = Column(String(2), default="ru")
     # created_at TIMESTAMP DEFAULT NOW()
     created_at = Column(DateTime, default=datetime.now)

@@ -1,22 +1,30 @@
-from _datetime import datetime
+from datetime import datetime
 from enum import Enum
 
 from pydantic import BaseModel
+
+
 class LanguageEnum(str, Enum):
     en = "en"
     uz = "uz"
     ru = "ru"
-class User(BaseModel):
+
+
+class UserBase(BaseModel):
     id: int
     full_name: str
 
-class UserCreate(User):
+
+class UserCreate(UserBase):
     pass
 
-# | This "or"
-class UserRead(User):
-    Language : LanguageEnum
+
+# | или
+
+class UserRead(UserBase):
+    language: LanguageEnum
     created_at: datetime | None
 
+
 class LanguageChange(BaseModel):
-    Language: LanguageEnum
+    language: LanguageEnum
