@@ -6,6 +6,7 @@ from models.product import Product
 
 class ProductManager:
     def __init__(self, db: AsyncSession):
+        self.remove_from_cart = None
         self.db = db
 
     async def get(

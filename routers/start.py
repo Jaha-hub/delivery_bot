@@ -11,7 +11,7 @@ router = Router()
 
 
 @router.message(CommandStart())
-async def start(message: Message, user: User, state: FSMContext):
+async def start(message: Message,  state: FSMContext,user: User):
     await state.clear()
     await message.answer(
         "Привет я интернет магазин \n Выберите действие",

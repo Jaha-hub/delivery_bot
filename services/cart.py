@@ -1,5 +1,5 @@
-import redis
-
+from redis import asyncio as redis
+import json
 
 class CartService:
     def __init__(self):
@@ -8,9 +8,12 @@ class CartService:
     async def get_cart(self,user_id):
         cart = await self.redis.get(f"cart:{user_id}")
         if not cart:
-            await self.redis.set(f"cart:{user_id}", {})
+            await self.redis.set(
+                f"cart:{user_id}",
+                json.dumps({})
+            )
             return {}
-        return cart
+        return json.loads(cart)
     async def add_to_cart(
             self,
             user_id: int,
@@ -22,15 +25,14 @@ class CartService:
         # {"user_id:product_id": quantity}
         # {"1234:1": 3, "1234:2":5}
         cart = await self.get_cart(user_id)  # 5
-        if cart:
-            if product_id in cart:
-                cart[product_id] += quantity
-            else:
-                cart[product_id] = quantity
+        if str(product_id) in cart:
+            cart[str(product_id)] += quantity
+        else:
+            cart[str(product_id)] = quantity
 
             await self.redis.set(
                 f"cart:{user_id}",
-                cart
+                json.dumps(cart)
             )
 
     async def remove_from_cart(
@@ -39,11 +41,11 @@ class CartService:
             product_id: int,
     ):
         cart = await self.get_cart(user_id)  # 5
-        if product_id in cart:
-            cart.pop(product_id)
+        if str(product_id) in cart:
+            cart.pop(str(product_id))
         await self.redis.get(
             f"cart:{user_id}",
-            cart
+            json.dumps(cart)
         )
 
     async def clear_cart(
@@ -54,5 +56,5 @@ class CartService:
         cart.clear()
         await self.redis.set(
             f"cart:{user_id}",
-            cart
+            json.dumps(cart)
         )

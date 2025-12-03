@@ -10,8 +10,8 @@ from routers.menu import router as menu
 bot = Bot(TOKEN)
 dp = Dispatcher()
 
-# dp.update.middleware(LoggingMiddleware())
-# dp.update.middleware(AuthMiddleware())
+dp.update.middleware(AuthMiddleware())
+dp.update.middleware(LoggingMiddleware())
 dp.include_router(start)
 dp.include_router(order)
 dp.include_router(settings)
