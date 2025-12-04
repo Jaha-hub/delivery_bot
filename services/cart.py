@@ -1,6 +1,9 @@
 import asyncio
 import json
 from redis import asyncio as redis
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from managers.product import ProductManager
 
 
 class CartService:
@@ -61,4 +64,15 @@ class CartService:
             json.dumps(cart)
         )
 
-
+    async def get_total_price(
+            self,
+            session:AsyncSession,
+            user_id: int,
+    ):
+        manager = ProductManager(session)
+        cart = await self.get_cart(user_id)
+        total = 0
+        for product_id , quantity in cart.items():
+            product = await manager.get(int(product_id))
+            total += product.price * quantity
+        return total

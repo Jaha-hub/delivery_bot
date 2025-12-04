@@ -1,0 +1,58 @@
+INSERT INTO categories (id, name, description) VALUES
+(1, 'Хот-Доги', 'Сочные горячие хот-доги с нежными сосисками, золотистой булочкой и разнообразными соусами на любой вкус.'),
+(2, 'Напитки', '«Освежающие, яркие и насыщенные напитки, создающие идеальное дополнение к блюдам меню!»'),
+(3, 'Бургеры', 'Сочные авторские бургеры с пышной булочкой, тающим сыром и фирменными соусами.'),
+(4, 'Десерты', 'Нежные, сладкие и невероятно аппетитные десерты, которые подарят удовольствие с первого укуса.'),
+(5, 'Пиццы', 'Горячая, ароматная и щедро наполненная пицца с разнообразными начинками и сыром.'),
+(6, 'Лаваши', 'Свежие, ароматные и щедро наполненные лаваши, приготовленные по фирменным рецептам.'),
+(7, 'Хагги', 'Хагги'),
+(8, 'Сендвичи', 'Сендвичи'),
+(9, 'Снеки', 'Хрустящие, яркие и невероятно вкусные снеки, которые подходят для перекуса и отдыха.');
+
+INSERT INTO products (name, description, price, photo, category_id) VALUES
+('Классический', 'Нежная сосиска и фирменные соусы — простой и любимый вкус.', 18000, 'https://www.chefmarket.ru/blog/wp-content/uploads/2018/05/3_1523456412_53a20.jpg', 1),
+('Нью-Йоркский', 'Сочный хот-дог с ароматным луком и пикантной горчицей.', 22000, 'https://perchik-delivery.ru/wp-content/uploads/2019/05/newyork-700x700.jpg', 1),
+('Чили-дог', 'Острый, яркий, будоражащий — для тех, кто любит огонек.', 27000, 'https://www.simplyrecipes.com/thmb/7ROH4eqjTVe3WzXLunwly8hmCiM=/1777x1333/smart/filters:no_upscale()/simple-chili-cheese-dogs-lead-2-e0b6a2d924714316b52f137d30d59d74.jpg', 1),
+('Чиз-дог', 'Плавленый сыр и сочная сосиска — максимальный комфортный вкус.', 25000, 'https://menu2go.ru/images/food/214/214_361_20220712172920.jpg', 1),
+('Мексиканский', 'Халапеньо, сальса и гуакамоле — взрыв вкуса по-мексикански!', 32000, 'https://sun9-25.userapi.com/s/v1/ig1/fmCnv2d8uX3sfqGYeZo4NvPJDzSjiQpNBeRdc_kbVhFsHjIqzCnV8WZqXEdfqZPLTDUT5-EO.jpg', 1),
+
+('Кола 0.5', 'Классический освежающий вкус для любого блюда.', 10000, 'https://www.coca-cola.com/content/dam/coca-cola/product-image/ru/ru/coca-cola-original-05l.png', 2),
+('Кола 1л', 'Большая бутылка для компании.', 16000, 'https://ir-3.ozone.ru/s3/multimedia-6/wc1000/6167460606.jpg', 2),
+('Fanta Апельсин', 'Яркий цитрусовый напиток со сладкой газировкой.', 12000, 'https://ir.ozone.ru/s3/multimedia-l/c1000/6204485857.jpg', 2),
+('Sprite 1л', 'Свежесть лимона и лайма без красителей.', 15000, 'https://images.lifestyleasia.com/wp-content/uploads/sites/6/2021/05/02110128/Sprite.jpg', 2),
+('BonAqua 0.5', 'Чистая питьевая вода без газа.', 7000, 'https://bonaqua.ru/images/share/bottle2.png', 2),
+
+('Классический бургер', 'Сочный котлет, сыр и фирменный соус.', 35000, 'https://cdn.burgerking.com/images/products/detail/big_king.jpg', 3),
+('Чизбургер', 'Традиционный бургер с тающим сыром.', 33000, 'https://www.maggi.ru/sites/default/files/srh_recipes/cebe12e7e1f57f57d0e4bbf8d5b95df7.jpg', 3),
+('Двойной бургер', 'Удвоенный вкус для настоящих гурманов.', 46000, 'https://static.tildacdn.com/tild3930-6233-4336-b936-643431336436/burger.jpg', 3),
+('Блюз Бургер', 'Пикантный фирменный соус и маринованный лук.', 40000, 'https://www.cookingclassy.com/wp-content/uploads/2020/06/hamburger-2.jpg', 3),
+('Гриль-Бургер', 'Хрустящая корочка и дымный аромат гриля.', 42000, 'https://www.americastestkitchen.com/assets/0/71/2701/2707/9daf4f2f-4330-4ca1-ad4b-7be1e247e790.jpg', 3),
+
+('Тирамису', 'Итальянский десерт с кофе и маскарпоне.', 23000, 'https://e3.edimdoma.ru/data/recipes/0008/3298/83298-ed4_wide.jpg?1598861599', 4),
+('Шоколадный фондан', 'Тающий шоколад внутри — восторг!', 26000, 'https://static.tildacdn.com/tild3134-3163-4131-a461-303839663163/fondant-1.jpg', 4),
+('Наполеон', 'Нежнейшие слои и крем по классическому рецепту.', 21000, 'https://attuale.ru/wp-content/uploads/2018/06/napoleon.jpg', 4),
+('Чизкейк', 'Сливочный нежный чизкейк с хрустящей основой.', 22000, 'https://static.1000.menu/img/content-v2/b0/ae/61898/klassicheskii-chizkeik_1620988662_5_max.jpg', 4),
+('Эклеры', 'Воздушные эклеры с кремовой начинкой.', 20000, 'https://static.tildacdn.com/tild6565-6638-4564-b964-316538353336/6.jpg', 4),
+
+('Маргарита', 'Классическая пицца с томатами и сыром.', 34000, 'https://www.pizzatempo.by/upload/resize_cache/webp/iblock/738/73887ec0bf97dd8a9792eb4e4582e08b.webp', 5),
+('Пепперони', 'Пицца с пряной колбасой и сыром.', 39000, 'https://laquista.ru/upload/iblock/67e/67ed16fff1f66a701d89f5cb9184160c.jpg', 5),
+('Гавайская', 'Ананас и ветчина — сладко-соленое удовольствие.', 41000, 'https://static.tildacdn.com/tild3539-3038-4230-a333-626238653430/5.jpg', 5),
+('Мясная', 'Микс мясных начинок и сыра.', 45000, 'https://pizzarufino.com/uploads/products/pizza-meat.jpg', 5),
+('Сырная', 'Для любителей сыра — сырный рай.', 37000, 'https://cdn.7days.ru/pic/fb1/9a2/1883853/1200/0/0/0/970/e6f8879be6d9fa7cb2b7a1ae88ac2e50.jpeg', 5),
+
+('Лаваш Классический', 'Нежное мясо, свежие овощи и соус.', 28000, 'https://dedulya.ru/wp-content/uploads/2021/04/klassicheskij-lavash.jpg', 6),
+('Лаваш Сырный', 'Сыр, мясо и запеченная корочка.', 30000, 'https://avatars.mds.yandex.net/get-eda/3520726/25af8f3e5da34ecaab070384bbdd7c286/orig', 6),
+('Лаваш Овощной', 'Легкий вариант со свежими овощами.', 25000, 'https://kebab-chelny.ru/wp-content/uploads/2022/04/ovoshhnoj-lavash-s-kuricej.jpeg', 6),
+
+('Хагги Барбекю', 'С кисло-сладким соусом барбекю.', 20000, 'https://vkusvill.ru/upload/resize_webp/iblock/27c/27c80e17432ba3fddd951d85a277ccb3.webp', 7),
+('Хагги Классический', 'Сливочный и нежный вкус.', 18000, 'https://vkusvill.ru/upload/resize_webp/iblock/afd/afd93ef3f4d76c5d79db6900e8aa667e.webp', 7),
+
+('Сэндвич Классический', 'Ветчина, сыр, огурцы и салат.', 19000, 'https://foyr.ru/wp-content/uploads/2020/06/sandwich.jpg', 8),
+('Сэндвич Сырный', 'Сочный сыр и томаты.', 20000, 'https://www.adventuresofanurse.com/wp-content/uploads/2017/10/air-fryer-grilled-cheese-1.jpg', 8),
+('Сэндвич Овощной', 'Легкий и питательный.', 17000, 'https://www.eatthis.com/wp-content/uploads/sites/4/2022/04/veggie-sandwich.jpg', 8),
+
+('Картофель Фри', 'Хрустящий и золотистый картофель.', 14000, 'https://www.povar.ru/data/cache/2021/07/24/09/19/716463_79580-1200x0.jpg', 9),
+('Куриные наггетсы', 'Сочные кусочки в хрустящей панировке.', 18000, 'https://static.tildacdn.com/tild6266-3162-4535-a138-653333663931/2.jpg', 9),
+('Луковые кольца', 'Хрустящие кольца в панировке.', 16000, 'https://laquintaespanola.com/wp-content/uploads/2020/09/onion-rings.jpg', 9),
+('Сырные палочки', 'Нежные сырные палочки в панировке.', 20000, 'https://www.maggi.ru/sites/default/files/styles/recipe_detail/public/srh_recipes/e9ca698eee05012103a9d68c03063f41.jpg', 9),
+('Гренки чесночные', 'Обжаренные гренки с ароматным чесноком.', 9000, 'https://static.tildacdn.com/tild6333-3837-4164-a532-396538613435/9.jpg', 9);

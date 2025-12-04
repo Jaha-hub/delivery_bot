@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Numeric, ForeignKey
+from sqlalchemy.orm import relationship
 
 from models.base import Base
 
@@ -12,3 +13,8 @@ class Product(Base):
     photo = Column(String, nullable=True)
     category_id = Column(Integer, ForeignKey("categories.id", ondelete="CASCADE"))
 
+    order_products = relationship(
+        "OrderProduct",
+        back_populates="product",
+        lazy="selectin"
+    )

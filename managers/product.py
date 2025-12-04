@@ -20,3 +20,6 @@ class ProductManager:
         stmt = select(Product).where(Product.category_id == category_id)
         result = await self.db.execute(stmt)
         return result.scalars().all()
+
+    async def create(self, phone_number, latitude, longitude, comment, client_id, products):
+        pass
